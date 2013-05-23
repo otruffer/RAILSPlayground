@@ -1,0 +1,6 @@
+class User < ActiveRecord::Base
+  attr_accessible :cerevis, :email
+  
+  validates :email, :presence => true
+  validates :cerevis, :length => {:maximun => 30, :minimum => 0}
+end
